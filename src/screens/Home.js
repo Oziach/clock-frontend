@@ -220,7 +220,7 @@ function Home_screen(){
 
         try {
             const payload = {session_id: session_id, user_note: comment};
-            const response = await fetch(`http://localhost:4000/api/home_screen/${session_id}`, {
+            const response = await fetch(`https://clock-backend.onrender.com/api/home_screen/${session_id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json'
@@ -241,7 +241,7 @@ function Home_screen(){
     async function fetch_work_sessions() {
         let user_id = find_cookie("user_id=").split("=")[1];
         try {
-            const response = await fetch(`http://localhost:4000/api/home_screen/${user_id}`, {
+            const response = await fetch(`https://clock-backend.onrender.com/api/home_screen/${user_id}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'
