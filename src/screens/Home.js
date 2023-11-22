@@ -179,7 +179,7 @@ function Home_screen(){
 
         let user_id = find_cookie("user_id=").split("=")[1];
         try {
-            const response = await fetch(`http://localhost:4000/api/home_screen/${user_id}?generatePdfReport=true`, {
+            const response = await fetch(`https://clock-backend.onrender.com/api/home_screen/${user_id}?generatePdfReport=true`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'

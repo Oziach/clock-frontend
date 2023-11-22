@@ -27,7 +27,7 @@ function Dropdown({ options, selected, find_cookie, selection }) {
 
         try {
             const payload = {session_id: session_id, working_from: selectedOption};
-            const response = await fetch(`http://localhost:4000/api/home_screen/${session_id}`, {
+            const response = await fetch(`https://clock-backend.onrender.com/api/home_screen/${session_id}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json'

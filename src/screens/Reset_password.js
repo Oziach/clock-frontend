@@ -29,12 +29,12 @@ function Reset_homescreen(){
         if (new_password_errror)
             return
 
-        const currentUrl = "http://localhost:4000/api/user/reset_password/8b4afc40db08a6928c48ce8b7337fbcc36ab29c11aeb5dfa008ef7aa68e0af2d";
+        const currentUrl = "https://clock-backend.onrender.com/api/user/reset_password/8b4afc40db08a6928c48ce8b7337fbcc36ab29c11aeb5dfa008ef7aa68e0af2d";
         const token = currentUrl.split("/reset_password/")[1];
         console.log(token);
         try {
             const payload = {password: new_password};
-            const response = await fetch(`https://solid-clock-api.onrender.com/api/user/reset_password/${token}`, {
+            const response = await fetch(`https://clock-backend.onrender.com/api/user/reset_password/${token}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json'

@@ -55,7 +55,7 @@ const Login_box = () => {
             set_auth_error("password cannot be empty")
         try {
             const payload = {password: password_login, email: username_login};
-            const response = await fetch('http://localhost:4000/api/user/login', {
+            const response = await fetch('https://clock-backend.onrender.com/api/user/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -126,7 +126,7 @@ const Login_box = () => {
 
         try {
             const payload = {username: username_sign_up, password: password_sign_up, email: email_sign_up };
-            const response = await fetch('http://localhost:4000/api/user/signup', {
+            const response = await fetch('https://clock-backend.onrender.com/api/user/signup', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -158,7 +158,7 @@ const Login_box = () => {
         try {
             console.log(email_forgot)
             const payload = {email: email_forgot};
-            const response = await fetch('http://localhost:4000/api/user/forgot_password', {
+            const response = await fetch('https://clock-backend.onrender.com/api/user/forgot_password', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -219,7 +219,7 @@ const Login_box = () => {
 
         try {
             const payload = {password: new_password};
-            const response = await fetch(`http://localhost:4000/api/user/reset_password/${token}`, {
+            const response = await fetch(`https://clock-backend.onrender.com/api/user/reset_password/${token}`, {
                 method: 'PATCH',
                 headers: {
                     'Content-Type': 'application/json'
